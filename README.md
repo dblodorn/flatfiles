@@ -1,5 +1,6 @@
 # 📁 FlatFiles 📁
 Blank WP theme for API Connection. This is just for you to connect to the CMS and access your data via JSON!
+See it action on this page ⛓: [https://dain.kim/archive/](https://dain.kim/archive/) 
 
 ## WP Plugins you need:
 + [WP REST API (2.0)](http://v2.wp-api.org/)
@@ -52,4 +53,4 @@ Gulp Tasks are trigerred through webpack config.
     gulp move
 
 #### HAVE FUN
-And btw, using this in conjunction with [VueJs](https://vuejs.org/) is awesome... 
+And btw, using this in conjunction with [VueJs](https://vuejs.org/) is awesome... 😎
