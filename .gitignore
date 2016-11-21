@@ -1,0 +1,5 @@
+assets/*
+app/node_modules
+app/deploy-credentials.json
+app/npm-debug.log
+dist/

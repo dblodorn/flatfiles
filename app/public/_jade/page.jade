@@ -1,0 +1,11 @@
+- get_header();
+main(role="main")
+  section#general-section
+    - if ( have_posts() ) :
+    - while ( have_posts() ) : the_post();
+      article
+        h1<?php the_title(); ?>
+        - the_content();
+    - endwhile
+    - endif
+- get_footer();

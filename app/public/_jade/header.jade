@@ -1,0 +1,5 @@
+doctype html
+| <html <?php language_attributes(); ?>>
+include ./_includes/head.jade
+| <body id="<?php global $post; $post_slug=$post->post_name; echo $post_slug ?>">
+include ./_includes/header-partial.jade

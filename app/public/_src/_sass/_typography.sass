@@ -1,0 +1,23 @@
+//-------------------------------------------------------------------
+//  TYPOGRAPHY
+//-------------------------------------------------------------------
+
+$monospace: monospace
+
+h1,h2,h3,h4,h5,p,a
+  font-family: $monospace
+  font-weight: 400
+  color: $type-color
+
+p
+  +phabletup
+    font-size: 2.85rem
+  font-size: 2.25rem
+  line-height: 1.45
+
+a
+  text-decoration: none
+  &:hover
+    color: $type-color
+  &:active
+    color: $type-color
