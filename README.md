@@ -16,20 +16,20 @@ Blank WP theme for API Connection. This is just for you to connect to the CMS an
 
 I recommend routing your site through [CloudFlare](https://www.cloudflare.com/) so you have free SSL.
 
-## Utilies:
+## Utilities:
 If you use FTP...
 
-  # using vinyl ftp through gulp you can do an easy deploy by creating a file called deploy-credentials.json in the root directory.
-  # this file should have the following info:
+    # using vinyl ftp through gulp you can do an easy deploy by creating a file called deploy-credentials.json in the root directory.
+    # this file should have the following info:
 
-  {
-    "user": "username",
-    "password": "password",
-    "host": "your.host",
-    "remoteFolder": "/uploadfolder/"
-  }
+    {
+      "user": "username",
+      "password": "password",
+      "host": "your.host",
+      "remoteFolder": "/uploadfolder/"
+    }
 
-  # Don't forget to make sure deploy-credentials.json in included in .gitignore!
+    # Don't forget to make sure deploy-credentials.json in included in .gitignore!
 
 ## Webpack / Build:
 This project uses jade-php (or pug) & sass, so if you want to extend the theme you can start there.  
