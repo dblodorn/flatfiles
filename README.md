@@ -1,7 +1,10 @@
 # 📁 FlatFiles 📁
 Blank WP theme for API Connection. This is just for you to connect to the CMS and access your data via JSON! In fact all you really need are the functions.php file and the public/library/custom-post-type.php - so you can use custom post types. All the other stuff is just sugar if you want to play around and make a theme you can look at...
 
-See it action on this page ⛓: [https://dain.kim/archive/](https://dain.kim/archive/) 
+See the API output on this page ⛓: [https://flatfiles.info/wp-json/wp/v2/posts/12](https://flatfiles.info/wp-json/wp/v2/posts/12) 
+See the API consumed on this page ⛓: [https://dain.kim/archive/](https://dain.kim/archive/) 
+
+See the theme in action on this page 😂: [https://flatfiles.info/](https://flatfiles.info/) 
 
 ## WP Plugins you need:
 + [WP REST API (2.0)](http://v2.wp-api.org/)
