@@ -54,3 +54,42 @@ Gulp Tasks are trigerred through webpack config.
 
 #### HAVE FUN
 And btw, using this in conjunction with [VueJs](https://vuejs.org/) is awesome... 😎
+
+#### Here's an example vue 1.x component using vue router:
+
+    <template lang="jade">
+      ul.links
+        li(v-for="links in work.acf.website_archive")
+          a.project-link.link(v-link="links.website_link" target="_blank") {{links.website_title}}
+          .archive-copy {{{links.website_description}}}
+    </template>
+
+    <script>
+      import $ from 'jquery'
+      export default {
+        data () {
+          return {
+            work: {}
+          }
+        },
+        route: {
+          canReuse: false,
+            activate: function() {
+            
+            this.$http.get('https://flatfiles.info/wp-json/wp/v2/posts/12').then (
+            function (data) {
+              this.$set('work', data.json());
+            },
+            function (data) {
+              alert('Failed to load data');
+            }); 
+          
+          }
+        }
+      }
+    </script>
+
+    <style lang="sass?indentedSyntax">
+      #css
+        background-color: blue
+    </style>
