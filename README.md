@@ -55,7 +55,7 @@ Gulp Tasks are trigerred through webpack config.
 #### HAVE FUN
 And btw, using this in conjunction with [VueJs](https://vuejs.org/) is awesome... 😎
 
-#### Here's an example vue 1.x component using vue router:
+#### Here's an example vue 1.x component using Vue-Resource:
 
     <template lang="jade">
       ul.links
