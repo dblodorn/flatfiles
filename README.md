@@ -1,5 +1,5 @@
 # 📁 FlatFiles 📁
-Blank WP theme for API Connection. This is just for you to connect to the CMS and access your data via JSON! In fact all you really need are the functions.php file and the public/library/custom-post-type.php - so you can use custom post types. All the other stuff is just sugar if you want to play around and make a theme you can look at...
+Blank WP theme for API Connection. This is just for you to connect to the CMS and access your data via JSON! In fact all you really need are the functions.php file and the public/library/custom-post-type.php / and whatever else creates enough for wordpress to recognize the theme as a [basic theme](https://github.com/MrMaz/Smallest-Wordpress-Theme-Ever). - so you can use custom post types. The other stuff is just extra fun if you want to play around and make a theme you can look at...
 
 See the API output on this page ⛓: [https://flatfiles.info/wp-json/wp/v2/posts/12](https://flatfiles.info/wp-json/wp/v2/posts/12)  
 See the API consumed on this page ⛓: [https://dain.kim/archive/](https://dain.kim/archive/) 
@@ -59,41 +59,29 @@ Gulp Tasks are trigerred through webpack config.
 #### HAVE FUN
 And btw, using this in conjunction with [VueJs](https://vuejs.org/) is awesome... 😎
 
-#### Here's an example vue 1.x component using Vue-Resource:
+#### Here's an example vue 2.x component using [Vue-Axios](https://github.com/imcvampire/vue-axios):
 
-    <template lang="jade">
-      ul.links
-        li(v-for="links in work.acf.website_archive")
-          a.project-link.link(v-link="links.website_link" target="_blank") {{links.website_title}}
-          .archive-copy {{{links.website_description}}}
+    <template lang="pug">
+      ul
+        li(v-for='item in work.acf.website_archive')
+          a( :href="item.website_link" target='_blank') {{item.website_title}}
     </template>
 
     <script>
-      import $ from 'jquery'
-      export default {
-        data () {
-          return {
-            work: {}
-          }
-        },
-        route: {
-          canReuse: false,
-            activate: function() {
-            
-            this.$http.get('https://flatfiles.info/wp-json/wp/v2/posts/12').then (
-            function (data) {
-              this.$set('work', data.json());
-            },
-            function (data) {
-              alert('Failed to load data');
-            }); 
-          
-          }
-        }
+    export default {
+      name: 'work',
+      data: () => ({
+        work: {}
+      }),
+      beforeMount () {
+        this.axios.get('https://flatfiles.info/wp-json/wp/v2/posts/12').then((workData) => {
+          this.work = workData.data
+        })
       }
+    }
     </script>
 
-    <style lang="sass?indentedSyntax">
-      #css
-        background-color: blue
+    <style lang="sass" scoped>
+    a
+      color: blue
     </style>
