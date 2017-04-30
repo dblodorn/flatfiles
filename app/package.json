@@ -1,7 +1,7 @@
 {
-  "name": "FlatFiles",
+  "name": "ZenSekizawa",
   "version": "1.0.0",
-  "description": "Blank WP theme for API Connection.",
+  "description": "Wp Theme For Zen Sekizawa.",
   "main": "gulpfile.js",
   "repository": "",
   "author": "Dain Blodorn Kim",
